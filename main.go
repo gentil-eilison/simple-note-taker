@@ -15,18 +15,18 @@ func main() {
 		return
 	}
 
-	fmt.Println(&note)
+	note.Display()
 
 }
 
 func getNoteData() (string, string) {
-	title := getUserInput("Note title:")
-	content := getUserInput("Note content:")
+	title := getUserInput("Note title: ")
+	content := getUserInput("Note content: ")
 	return title, content
 }
 
 func getUserInput(prompt string) string {
-	fmt.Println(prompt)
+	fmt.Print(prompt)
 	var value string
 	fmt.Scanln(&value)
 	return value
